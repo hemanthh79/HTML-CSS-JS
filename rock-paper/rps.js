@@ -24,6 +24,10 @@ const playGame = (userChoice) => {
     const compChoice = getCompChoice();
     const result = getResult(userChoice, compChoice);
 
+    if(document.querySelector(".board").style.display === "none") {
+        document.querySelector(".board").style.display = "flex";
+    }
+
     if(result == "draw") {
         msg.textContent = "Draw! You both selected same choice";
         msg.style.backgroundColor = "blue";
